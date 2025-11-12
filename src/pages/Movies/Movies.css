@@ -168,7 +168,7 @@ li:hover {
     order: 2;
 }
 
-.back-btn {
+.back-to-search-btn {
     background-color: transparent;
     border: none;
     font-size: 18px;
@@ -183,7 +183,7 @@ li:hover {
     gap: 8px;
 }
 
-.back-btn:hover {
+.back-to-search-btn:hover {
     background-color: rgb(242, 233, 218);
     transform: translateX(-3px);
 }

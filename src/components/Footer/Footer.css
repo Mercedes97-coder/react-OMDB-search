@@ -50,13 +50,11 @@ li:hover {
     display: flex;
     flex-direction: column;
 }
-.footer__links {
-    display: block;
-}
+
 }
 
 @media (max-width: 576px) {
     .footer__logo {
-        display: block;
+        display: none;
     }
 }

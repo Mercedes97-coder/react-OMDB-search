@@ -94,16 +94,11 @@ li:hover {
 
 @media(max-width: 768px) {
 
- 
-
-.nav__bar--links {
-    display: none;
-}
 .nav__container {
     display: flex;
 }
 .nav__bar--logo {
-    left: 50%;
+    display: none;
 }
 
 }

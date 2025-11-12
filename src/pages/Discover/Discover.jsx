@@ -43,7 +43,7 @@ const Discover = () => {
       </div>
 
       {loading && (
-        <div className="discover__loading">Finding the perfect movie for you...</div>
+        <div className="discover__loading">Finding an unexpected movie for you...</div>
       )}
 
       {movie && !loading && (

@@ -1,10 +1,9 @@
-import React from 'react';
-import axios from 'axios';
+
 import "./Home.css";
 import watchMovies from '../../assets/undraw_movie-night_pkvp beige.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 

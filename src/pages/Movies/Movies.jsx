@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Movies.css";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import watchMovies from "../../assets/undraw_movie-night_pkvp beige.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import watchMovies from "../../assets/undraw_movie-night_pkvp beige.svg";
 
 const Movies = () => {
   const [searchParams] = useSearchParams();
@@ -30,56 +30,61 @@ const Movies = () => {
 
   return (
     <div className="movies">
-      <div className="movies__container">
-        <div className="movies__row">
-          <div className="movie-list">
-            {loading ? (
-              new Array(6).fill(0).map((element, index) => (
-                <div className="movie-card skeleton__movie-card" key={index}>
-                  <div className="skeleton__loading skeleton__poster"></div>
-                  <div className="skeleton__loading skeleton__title"></div>
-                  <div className="skeleton__loading skeleton__year"></div>
-                </div>
-              ))
-            ) : movies.length === 0 ? (
-              <div className="no-results">
-                <h2>No movies found</h2>
-                <p>Try searching for a different movie title</p>
-                <button
-                  className="back-to-search-btn"
-                  onClick={() => navigate("/")}
-                >
-                  Back to Search
-                </button>
-                <img src={watchMovies} className="no-results__img" alt="" />
-              </div>
-            ) : (
-              movies
-                .map((movie) => (
-                  <div
-                    className="movie-card"
-                    key={movie.imdbID}
-                    onClick={() => navigate(`/movie/${movie.imdbID}`)}
-                  >
-                    <div className="movie-card__container">
-                      <h3>{movie.Title}</h3>
-                      <p>
-                        <b>Year:</b> {movie.Year}
-                      </p>
-                    </div>
-                    <div className="movie-card__img--wrapper">
-                      <div className="movie-card__img">
-                        <img
-                          src={movie.Poster}
-                          className="poster__img"
-                          alt="Movie Poster"
-                        />
-                      </div>
-                    </div>
+      <div className="movies__wrapper">
+        <button className="back-btn" onClick={() => navigate(-1)}>
+          <FontAwesomeIcon icon={faArrowLeft} /> Back
+        </button>
+        <div className="movies__container">
+          <div className="movies__row">
+            <div className="movie-list">
+              {loading ? (
+                new Array(6).fill(0).map((element, index) => (
+                  <div className="movie-card skeleton__movie-card" key={index}>
+                    <div className="skeleton__loading skeleton__poster"></div>
+                    <div className="skeleton__loading skeleton__title"></div>
+                    <div className="skeleton__loading skeleton__year"></div>
                   </div>
                 ))
-                .slice(0, 6)
-            )}
+              ) : movies.length === 0 ? (
+                <div className="no-results">
+                  <h2>No movies found</h2>
+                  <p>Try searching for a different movie title</p>
+                  <button
+                    className="back-to-search-btn"
+                    onClick={() => navigate("/")}
+                  >
+                    Back to Search
+                  </button>
+                  <img src={watchMovies} className="no-results__img" alt="" />
+                </div>
+              ) : (
+                movies
+                  .map((movie) => (
+                    <div
+                      className="movie-card"
+                      key={movie.imdbID}
+                      onClick={() => navigate(`/movie/${movie.imdbID}`)}
+                    >
+                      <div className="movie-card__container">
+                        <h3>{movie.Title}</h3>
+                        <p>
+                          <b>Year:</b> {movie.Year}
+                        </p>
+                      </div>
+                      <div className="movie-card__img--wrapper">
+                        <div className="movie-card__img">
+                          <img
+                            src={movie.Poster}
+                            className="poster__img"
+                            alt="Movie Poster"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                  .slice(0, 6)
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -51,6 +51,11 @@ li:hover {
     padding: 100px 0;
     
 }
+ .movies__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
 
 .movies__row {
   margin: 0 auto;
@@ -163,21 +168,24 @@ li:hover {
     order: 2;
 }
 
-.back-to-search-btn {
-    background-color: #c65764;
-    color: white;
+.back-btn {
+    background-color: transparent;
     border: none;
-    padding: 12px 30px;
     font-size: 18px;
-    border-radius: 8px;
+    color: #333;
     cursor: pointer;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
     transition: all 300ms ease;
-    order: 3;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.back-to-search-btn:hover {
-    background-color: #a84552;
-    transform: translateY(-2px);
+.back-btn:hover {
+    background-color: rgb(242, 233, 218);
+    transform: translateX(-3px);
 }
 
 .no-results__img {

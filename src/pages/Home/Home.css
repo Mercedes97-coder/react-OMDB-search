@@ -36,9 +36,9 @@ li:hover {
 }
 
 .search__bar--title {
-    color: #fff;
+    color: #333;
     font-size: 56px;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
 }
 

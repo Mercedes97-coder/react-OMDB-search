@@ -12,16 +12,16 @@ const MovieInfo = () => {
 
   let navigate = useNavigate();
 
+ useEffect(() => {
   async function getMovieDetails() {
     setLoading(true);
     const { data } = await axios.get(`https://omdbapi.com/?i=${id}&apikey=d9398c17`);
     setMovie(data);
     setLoading(false);
   }
-
-  useEffect(() => {
-    getMovieDetails();
-  }, [id]);
+  
+  getMovieDetails();
+}, [id]);
 
    if (loading) {
     return (

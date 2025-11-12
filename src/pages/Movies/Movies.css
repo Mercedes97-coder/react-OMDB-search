@@ -139,3 +139,50 @@ li:hover {
     width: 50%;
     height: 16px; 
 }
+
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-results h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+    order: 1;
+}
+
+.no-results p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 30px;
+    order: 2;
+}
+
+.back-to-search-btn {
+    background-color: #c65764;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    order: 3;
+}
+
+.back-to-search-btn:hover {
+    background-color: #a84552;
+    transform: translateY(-2px);
+}
+
+.no-results__img {
+    max-width: 400px;
+    width: 100%;
+    margin-top: 30px;
+    order: 4;
+}

@@ -10,7 +10,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
 
-  const [movie, setMovie] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   
   let navigate = useNavigate();
@@ -21,15 +20,6 @@ const Home = () => {
       navigate(`/movies?search=${searchTerm}`);
     }
   }
-
-  async function getMovies() {
-    const { data } = await axios.get(`https://omdbapi.com/?s=${searchTerm}&apikey=d9398c17`)
-    setMovie(data);
-  }
-
-  useEffect(() => {
-
-  }, [])
 
   return (
     

@@ -14,8 +14,8 @@ const Footer = () => {
           </div>
           <ul className="nav__bar--links footer__links">
             <li className="nav__bar--link" onClick={() => navigate('/')}>Home</li>
-            <li className="nav__bar--link">Find Your Movie</li>
-            <li className="nav__bar--link btn">Sign In</li>
+            <li className="nav__bar--link">Discover</li>
+            <button className="nav__bar--link contact__btn">Contact</button>
           </ul>
         </div>
       </div>

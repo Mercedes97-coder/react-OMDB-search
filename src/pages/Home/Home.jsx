@@ -8,10 +8,6 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-
-
-//`https://omdbapi.com/?s=${searchTerm}&apikey=d9398c17`
-
 const Home = () => {
 
   const [movie, setMovie] = useState([]);
@@ -19,8 +15,8 @@ const Home = () => {
   
   let navigate = useNavigate();
 
-   function handleSearch(e) {
-    e.preventDefault(); // Prevents page reload
+   function handleSearch(event) {
+    event.preventDefault(); 
     if (searchTerm.trim()) {
       navigate(`/movies?search=${searchTerm}`);
     }
@@ -42,7 +38,7 @@ const Home = () => {
         <div className="search__bar--wrapper">
           <h1 className="search__bar--title">Browse Movie Titles</h1>
           <div className="search__bar">
-            <form>
+            <form onSubmit={handleSearch}>
               <input
                 type="text"
                 placeholder="Search for a movie"

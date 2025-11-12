@@ -19,8 +19,8 @@ const Navbar = () => {
           </div>
           <ul className="nav__bar--links">
             <li className="nav__bar--link" onClick={() => navigate('/')}>Home</li>
-            <li className="nav__bar--link">Find Your Movie</li>
-            <li className="nav__bar--link btn">Sign In</li>
+            <li className="nav__bar--link" onClick={() => navigate('discover')}>Discover</li>
+            <button className="nav__bar--link contact__btn">Contact</button>
           </ul>
         </div>
     </div>
